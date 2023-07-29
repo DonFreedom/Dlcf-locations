@@ -50,7 +50,9 @@ body {
     padding: 25px;
     padding-top: 150px;
   }
-
+span{
+  font-weight: 600;
+}
 
   .text-content{
     display: flex;
@@ -63,7 +65,7 @@ body {
 .text-content p{
 font-size: 15px;
 }
-  .images {
+.images {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -108,8 +110,9 @@ font-size: 15px;
 @media (min-width: 1024px) {
   .images {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 32px;
-    grid-row-gap: 1px;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    border-radius: 10px;
   }
   .content-container div{
     flex-basis: 50%;
