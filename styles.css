@@ -111,9 +111,11 @@ font-size: 15px;
     grid-column-gap: 32px;
     grid-row-gap: 1px;
   }
-  .content-container{
+  .content-container div{
     flex-basis: 50%;
   }
+
+
   .content-container .image-container {
     width: 100%;
     float: right;
