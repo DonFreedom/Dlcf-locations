@@ -1,0 +1,175 @@
+/* I implemented a mobile first approach for convenience 
+and easy scaling of screen sizes for responsivenes */
+
+/* mobile */
+
+:root{
+    --header-color:  #0a0a23;
+    --header-border: #fdb347;
+    --header-text: #fff;
+    --body-background-color: #f5f6f7;
+    --body-padding: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "Open Sans", sans-serif;
+  background: var(--body-background-color) ;
+}
+
+.header {
+  text-transform: uppercase;
+  background-color:var(--header-color);
+  color: var(--header-text);
+  border-bottom: 4px solid var(--header-border);
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+}
+
+.header h1{
+    font-size: 25px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.content-section {
+    padding: 25px;
+    padding-top: 150px;
+  }
+
+
+  .text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text-content h2{
+    font-size: 20px;
+}
+.text-content p{
+font-size: 15px;
+}
+  .images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+
+  .content-container .image-container img {
+    width: 100%;
+  }
+
+/* for tablet  */
+
+@media (min-width: 668px) {
+
+
+    
+
+.header h1{
+    animation: slide 2s ease-in 0s forwards;
+    max-width: fit-content;
+    position: relative;
+}
+
+    @keyframes slide {
+        from {
+          /* transform: translateX(0); */
+          left: 0;
+          /* margin-inline: 0%; */
+          opacity: 0;
+        }
+        to {
+          /* transform: translateX(100%); */
+          left: 40%;
+          /* margin-inline: auto; */
+          opacity: 1;
+        }
+      }
+}
+
+/* for desktop screen  */
+@media (min-width: 1024px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 1px;
+  }
+  .content-container{
+    flex-basis: 50%;
+  }
+  .content-container .image-container {
+    width: 100%;
+    float: right;
+    display: flex;
+  }
+
+  .content-container .image-container img {
+    width: 100%;
+  }
+
+  .content-container{
+    flex-direction: row;
+  }
+.text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text-content h2{
+    text-align: center;
+}
+.text-content p{
+font-weight: 300;
+line-height: 35px ;
+}
+
+
+  .content-section {
+    padding: 100px;
+    padding-top: 150px;
+  }
+  .header {
+    padding: 35px;
+  }
+
+  .header h1 {
+    animation: slide 2s ease-in 0s forwards;
+    /* transform: translateX(-50%);  */
+    /* background-color: #fdb347; */
+    max-width: fit-content;
+    position: relative;
+  }
+
+  /* animations  */
+  @keyframes slide {
+    from {
+      /* transform: translateX(0); */
+      left: 0;
+      /* margin-inline: 0%; */
+      opacity: 0;
+    }
+    to {
+      /* transform: translateX(100%); */
+      left: 40%;
+      /* margin-inline: auto; */
+      opacity: 1;
+    }
+  }
+}
